@@ -10,7 +10,7 @@ const {mongoDbUrl, PORT} = require('./config/configuration');
 const flash = require('connect-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
-const {selectOption} = require('./config/customFunctions');
+
 const fileUpload = require('express-fileupload');
 const passport = require('passport');
 
@@ -53,9 +53,6 @@ app.use(globalVariables);
 /* File Upload Middleware*/
 app.use(fileUpload());
 
-/* Setup View Engine To Use Handlebars */
-app.engine('handlebars', hbs({defaultLayout: 'default', helpers: {select: selectOption}}));
-app.set('view engine' , 'handlebars');
 
 
 /* Method Override Middleware*/
