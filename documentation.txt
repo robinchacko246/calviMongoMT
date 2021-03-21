@@ -1,0 +1,139 @@
+
+AUTH ROUTES
+=============
+
+1.REGISTARATION
+------------------------------------------------------
+
+API =>localhost:3000/register
+
+
+body values
+
+                                                {
+
+                                                    "firstName":"robin",
+                                                    "lastName":"chacko",
+                                                    "email":"robinchacko24@gmail.com",
+                                                    "password":"5448lord",
+                                                    "passwordConfirm":"5448lord"
+                                                }
+
+2.LOGIN
+-------------------------------------------------------
+
+API=>localhost:3000/login
+
+body values
+
+                                                {
+
+                                                    "email":"robinchacko24@gmail.com",
+                                                    "password":"5448lord"
+                                                }
+
+
+
+3.FORGOT password
+
+---------------------------------------------------------------
+
+
+API:=>localhost:3000/forgotpassword
+
+
+BODY values
+
+
+{"email":"robinchacko246@gmail.com"}
+
+
+check user's email inbox ..i am sending email using nodemailer
+
+4.when forgot password click then password reset link has been sent to user mail then 
+
+-----------------------------------------------------------------------------------------------
+
+  the reset link api will be like this =>> localhsot:3000/passwordReset/:token/:email
+
+
+eg:===>
+  http://localhost:3000/passwordReset/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IlpadkVua0JUIiwiaWF0IjoxNjE2MzA1NTk5LCJhdWQiOiJodHRwczovL3Byb3ZlcHJpdmFjeS5jb20iLCJpc3MiOiJFbXZpZ28jMjAxOCIsInN1YiI6IkpXVCBTZWN1cml0dHkifQ.fTfa0hulYQwzBTGJ_SMgPc9ZExLFzx5xEvng5JK2nu13dVqLLkcB8KOJIf__btcxgpt1jzW08jmlQ42x5ypgFQ/robinchacko246@gmail.com
+
+
+5.UPDATE PASSWORD   (if tocken is valid)
+
+
+
+ {"newPassword":"hai",
+"passwordConfirm":"hai",
+"email":"robinchacko246@gmail.com"
+}
+
+
+6.Employees List-with pagination
+==================================
+
+API=>localhost:3000/employees
+
+ body values
+
+ {
+     "pageNumber":2,
+    "nPerPage":1
+}
+
+
+7.EMPLOYEEE CREATION
+
+API===>localhost:3000/employees/create
+
+
+{
+    "FirstName": "TestQ",
+        "LastName": "Test",
+        "Age": "Test",
+        "Email": "Test",
+        "Phone": "Test",
+        "City": "Test",
+        "Country": "Test",
+        "Image": "Test",
+        "EmployeeId": "Test"
+}
+
+8.EMPLOYEE EDIT 
+
+API:====>localhost:3000/employees/edit/6056eea7eae0395ff25795a7
+
+{
+    "FirstName": "TestQ",
+        "LastName": "Test",
+        "Age": "Test",
+        "Email": "Test",
+        "Phone": "Test",
+        "City": "Test",
+        "Country": "Test",
+        "Image": "Test",
+        "EmployeeId": "Test"
+}
+
+
+9.EMPLOYEE DELETE
+
+
+API:localhost:3000/employees/delete/6056eea7eae0395ff25795a7
+
+
+body
+
+
+{
+
+    "employeeId":"6056fe9a256adf17cf4cd86a"
+}
+
+
+
+
+
+
